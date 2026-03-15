@@ -8,22 +8,23 @@ export default function Experiencia() {
 
       <div className="flex flex-col gap-6">
 
+        {/* EXPERIENCIA REAL */}
         <div className="p-6 rounded-xl border border-foreground/20 bg-background/50">
-          <h3 className="text-xl font-semibold">IT Support Assistant</h3>
-          <p className="opacity-80">2023 - Actualidad</p>
-          <p className="mt-2 opacity-80">
-            Resolución de incidencias, mantenimiento de sistemas, soporte a usuarios
-            y optimización de procesos internos.
-          </p>
-        </div>
+          <h3 className="text-xl font-semibold">
+            IT Support Assistant & Backend Developer – Kalacibi Solutions S.L.
+          </h3>
 
-        <div className="p-6 rounded-xl border border-foreground/20 bg-background/50">
-          <h3 className="text-xl font-semibold">Backend Developer</h3>
-          <p className="opacity-80">2021 - 2023</p>
-          <p className="mt-2 opacity-80">
-            Desarrollo de APIs, integración de servicios, automatización y creación
-            de herramientas internas para mejorar la productividad.
-          </p>
+          <p className="opacity-80">06/2025 – Actual</p>
+          <p className="opacity-80">Alcobendas / San Sebastián de los Reyes (Madrid), España</p>
+
+          <ul className="mt-4 flex flex-col gap-2 opacity-80 list-disc pl-5">
+            <li>Desarrollo de infrastructura interna para el desarrollo de paginas web</li>
+            <li>Mantenimiento y soporte de equipos con Windows y macOS.</li>
+            <li>Configuración y gestión de cuentas de Microsoft.</li>
+            <li>Desarrollo de scripts y automatización de tareas para optimizar procesos.</li>
+            <li>Realización de auditorías y seguimiento de logs para control y diagnóstico de sistemas.</li>
+            <li>Gestión y comunicación con proveedores tecnológicos.</li>
+          </ul>
         </div>
 
       </div>
