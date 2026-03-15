@@ -1,6 +1,7 @@
 "use client";
 
 import { useState } from "react";
+import ThemeToggle from "./ThemeToggle";
 
 export default function Navbar() {
   const [open, setOpen] = useState(false);
@@ -11,12 +12,12 @@ export default function Navbar() {
       {/* CONTENEDOR SUPERIOR */}
       <div className="w-full px-6 h-16 flex items-center justify-between">
 
-        {/* LOGO PEGADO A LA IZQUIERDA */}
-        <div className="text-xl font-semibold ml-0">
+        {/* LOGO */}
+        <div className="text-xl font-semibold">
           Mi Portfolio
         </div>
 
-        {/* BOTÓN HAMBURGUESA (solo móvil) */}
+        {/* HAMBURGUESA (solo móvil) */}
         <button
           className="md:hidden text-2xl"
           onClick={() => setOpen(!open)}
@@ -25,13 +26,16 @@ export default function Navbar() {
         </button>
 
         {/* MENÚ DESKTOP */}
-        <ul className="hidden md:flex gap-6 text-base font-medium">
+        <ul className="hidden md:flex gap-6 text-base font-medium items-center">
           <li className="cursor-pointer hover:opacity-70 transition">Inicio</li>
           <li className="cursor-pointer hover:opacity-70 transition">Sobre Mí</li>
           <li className="cursor-pointer hover:opacity-70 transition">Experiencia</li>
           <li className="cursor-pointer hover:opacity-70 transition">Habilidades</li>
           <li className="cursor-pointer hover:opacity-70 transition">Contacto</li>
           <li className="cursor-pointer hover:opacity-70 transition">Extras</li>
+
+          {/* ÚNICO BOTÓN DE TEMA */}
+          <ThemeToggle />
         </ul>
       </div>
 
@@ -44,6 +48,9 @@ export default function Navbar() {
           <li className="cursor-pointer hover:opacity-70 transition">Habilidades</li>
           <li className="cursor-pointer hover:opacity-70 transition">Contacto</li>
           <li className="cursor-pointer hover:opacity-70 transition">Extras</li>
+
+          {/* ÚNICO BOTÓN DE TEMA TAMBIÉN AQUÍ */}
+          <ThemeToggle />
         </ul>
       )}
 

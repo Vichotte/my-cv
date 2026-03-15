@@ -1,7 +1,6 @@
 "use client";
 
 import Image from "next/image";
-import ThemeToggle from "./components/ThemeToggle";
 import Navbar from "./components/Navbar";
 import { useEffect, useState } from "react";
 
@@ -54,9 +53,7 @@ export default function Home() {
           </div>
         </section>
 
-        {/* RESTO DEL CONTENIDO QUE YA TENÍAS */}
-        <ThemeToggle />
-
+        {/* LOGO NEXT.JS */}
         <Image
           className="dark:invert"
           src="/next.svg"

@@ -7,26 +7,22 @@ export default function ThemeToggle() {
   const { theme, setTheme } = useTheme();
   const [mounted, setMounted] = useState(false);
 
-  useEffect(() => {
-    setMounted(true);
-  }, []);
-
-  if (!mounted) {
-    return (
-      <button className="px-4 py-2 rounded bg-zinc-200 text-black">
-        ...
-      </button>
-    );
-  }
+  useEffect(() => setMounted(true), []);
+  if (!mounted) return null;
 
   const isDark = theme === "dark";
 
   return (
     <button
       onClick={() => setTheme(isDark ? "light" : "dark")}
-      className="px-4 py-2 rounded bg-zinc-200 dark:bg-zinc-800 text-black dark:text-white"
+      className={`
+        w-10 h-10 rounded-full flex items-center justify-center
+        transition-all duration-300 border
+        ${isDark ? "bg-white text-black border-white" : "bg-black text-white border-black"}
+      `}
+      aria-label="Cambiar tema"
     >
-      {isDark ? "Modo claro" : "Modo oscuro"}
+      {isDark ? <span className="text-lg">☀️</span> : <span className="text-lg">🌙</span>}
     </button>
   );
 }
