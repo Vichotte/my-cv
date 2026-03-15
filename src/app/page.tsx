@@ -2,16 +2,21 @@
 
 import Image from "next/image";
 import ThemeToggle from "./components/ThemeToggle";
+import Navbar from "./components/Navbar";
 import { useEffect, useState } from "react";
 
 export default function Home() {
   const [mounted, setMounted] = useState(false);
-
   useEffect(() => setMounted(true), []);
 
   return (
-    <div className="flex min-h-screen items-center justify-center bg-background text-foreground font-sans">
-      <main className="flex min-h-screen w-full max-w-3xl flex-col items-center justify-between py-32 px-16 bg-background text-foreground sm:items-start">
+    <div className="flex min-h-screen flex-col bg-background text-foreground font-sans">
+
+      {/* NAVBAR SIEMPRE ARRIBA */}
+      <Navbar />
+
+      {/* CONTENIDO CENTRADO */}
+      <main className="flex flex-1 w-full max-w-3xl mx-auto flex-col items-center justify-between py-32 px-6 sm:px-16 bg-background text-foreground">
 
         <ThemeToggle />
 
@@ -48,7 +53,6 @@ export default function Home() {
           </p>
         </div>
 
-        {/* Evitar hydration mismatch */}
         {mounted && (
           <div className="flex flex-col gap-4 text-base font-medium sm:flex-row">
 
