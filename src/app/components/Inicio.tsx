@@ -9,11 +9,11 @@ export default function Inicio() {
       {/* Texto */}
       <div className="flex flex-col gap-4 max-w-lg">
         <h1 className="text-4xl md:text-5xl font-bold">
-          Sebastián Gómez
+          Marcos Jiménez Vicho
         </h1>
 
         <h2 className="text-2xl md:text-3xl font-medium opacity-80">
-          Desarrollador Web
+          IT Support Assistant & Backend Developer
         </h2>
 
         <div className="flex gap-4 mt-4">
