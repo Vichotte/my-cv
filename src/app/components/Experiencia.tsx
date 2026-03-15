@@ -2,7 +2,7 @@
 
 export default function Experiencia() {
   return (
-    <section className="w-full py-20 flex flex-col gap-8">
+    <section id="experiencia" className="w-full py-20 flex flex-col gap-8">
 
       <h2 className="text-3xl md:text-4xl font-bold">Experiencia</h2>
 

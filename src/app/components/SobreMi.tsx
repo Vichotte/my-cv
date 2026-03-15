@@ -2,7 +2,8 @@
 
 export default function SobreMi() {
   return (
-    <section className="w-full py-20 flex flex-col items-start gap-10">
+    <section id="sobremi" className="w-full py-20 flex flex-col items-start gap-10">
+
 
       {/* Texto */}
       <div className="flex flex-col gap-4 w-full">

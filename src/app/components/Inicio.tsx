@@ -4,7 +4,7 @@ import Image from "next/image";
 
 export default function Inicio() {
   return (
-    <section className="w-full flex flex-col-reverse md:flex-row items-center justify-between gap-10 py-20">
+    <section id="inicio" className="w-full flex flex-col-reverse md:flex-row items-center justify-between gap-10 py-20">
 
       {/* Texto */}
       <div className="flex flex-col gap-4 max-w-lg">

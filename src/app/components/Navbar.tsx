@@ -27,28 +27,42 @@ export default function Navbar() {
 
         {/* MENÚ DESKTOP */}
         <ul className="hidden md:flex gap-6 text-base font-medium items-center">
-          <li className="cursor-pointer hover:opacity-70 transition">Inicio</li>
-          <li className="cursor-pointer hover:opacity-70 transition">Sobre Mí</li>
-          <li className="cursor-pointer hover:opacity-70 transition">Experiencia</li>
-          <li className="cursor-pointer hover:opacity-70 transition">Habilidades</li>
-          <li className="cursor-pointer hover:opacity-70 transition">Contacto</li>
-          <li className="cursor-pointer hover:opacity-70 transition">Extras</li>
+        <li>
+          <a href="#inicio" className="cursor-pointer hover:opacity-70 transition">
+            Inicio
+          </a>
+        </li>
 
-          {/* ÚNICO BOTÓN DE TEMA */}
-          <ThemeToggle />
-        </ul>
+        <li>
+          <a href="#sobremi" className="cursor-pointer hover:opacity-70 transition">
+            Sobre Mí
+          </a>
+        </li>
+
+        <li>
+          <a href="#experiencia" className="cursor-pointer hover:opacity-70 transition">
+            Experiencia
+          </a>
+        </li>
+
+        <li className="cursor-pointer hover:opacity-70 transition">Habilidades</li>
+        <li className="cursor-pointer hover:opacity-70 transition">Contacto</li>
+        <li className="cursor-pointer hover:opacity-70 transition">Extras</li>
+
+        <ThemeToggle />
+      </ul>
+
       </div>
 
       {/* MENÚ MÓVIL */}
       {open && (
         <ul className="md:hidden flex flex-col gap-4 px-6 pb-4 text-base font-medium">
-          <li className="cursor-pointer hover:opacity-70 transition">Inicio</li>
-          <li className="cursor-pointer hover:opacity-70 transition">Sobre Mí</li>
-          <li className="cursor-pointer hover:opacity-70 transition">Experiencia</li>
-          <li className="cursor-pointer hover:opacity-70 transition">Habilidades</li>
-          <li className="cursor-pointer hover:opacity-70 transition">Contacto</li>
-          <li className="cursor-pointer hover:opacity-70 transition">Extras</li>
-
+          <li><a href="#inicio" className="hover:opacity-70 transition">Inicio</a></li>
+          <li><a href="#sobremi" className="hover:opacity-70 transition">Sobre Mí</a></li>
+          <li><a href="#experiencia" className="hover:opacity-70 transition">Experiencia</a></li>
+          <li className="hover:opacity-70 transition">Habilidades</li>
+          <li className="hover:opacity-70 transition">Contacto</li>
+          <li className="hover:opacity-70 transition">Extras</li>
           {/* ÚNICO BOTÓN DE TEMA TAMBIÉN AQUÍ */}
           <ThemeToggle />
         </ul>
