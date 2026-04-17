@@ -6,6 +6,7 @@ import Inicio from "./components/Inicio";
 import SobreMi from "./components/SobreMi";
 import Experiencia from "./components/Experiencia";
 import { useEffect, useState } from "react";
+import Estudios from "./components/Estudios";
 
 export default function Home() {
   const [mounted, setMounted] = useState(false);
@@ -25,6 +26,7 @@ export default function Home() {
         {/* SECCIONES */}
         <SobreMi />
         <Experiencia />
+        <Estudios />
 
       </main>
     </div>

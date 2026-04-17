@@ -45,6 +45,12 @@ export default function Navbar() {
           </a>
         </li>
 
+        <li>
+          <a href="#estudios" className="cursor-pointer hover:opacity-70 transition">
+            Estudios
+          </a>
+        </li>
+
         <li className="cursor-pointer hover:opacity-70 transition">Habilidades</li>
         <li className="cursor-pointer hover:opacity-70 transition">Contacto</li>
         <li className="cursor-pointer hover:opacity-70 transition">Extras</li>
@@ -60,6 +66,7 @@ export default function Navbar() {
           <li><a href="#inicio" className="hover:opacity-70 transition">Inicio</a></li>
           <li><a href="#sobremi" className="hover:opacity-70 transition">Sobre Mí</a></li>
           <li><a href="#experiencia" className="hover:opacity-70 transition">Experiencia</a></li>
+          <li><a href="#estudios" className="hover:opacity-70 transition">Estudios</a></li>
           <li className="hover:opacity-70 transition">Habilidades</li>
           <li className="hover:opacity-70 transition">Contacto</li>
           <li className="hover:opacity-70 transition">Extras</li>
