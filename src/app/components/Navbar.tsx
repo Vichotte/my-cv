@@ -57,7 +57,12 @@ export default function Navbar() {
           </a>
         </li>
 
-        <li className="cursor-pointer hover:opacity-70 transition">Contacto</li>
+         <li>
+          <a href="#contacto" className="cursor-pointer hover:opacity-70 transition">
+            Contacto
+          </a>
+        </li>
+
         <li className="cursor-pointer hover:opacity-70 transition">Extras</li>
 
         <ThemeToggle />
@@ -73,7 +78,7 @@ export default function Navbar() {
           <li><a href="#experiencia" className="hover:opacity-70 transition">Experiencia</a></li>
           <li><a href="#estudios" className="hover:opacity-70 transition">Estudios</a></li>
           <li><a href="#habilidades" className="hover:opacity-70 transition">Habilidades</a></li>
-          <li className="hover:opacity-70 transition">Contacto</li>
+           <li><a href="#contacto" className="hover:opacity-70 transition">Contacto</a></li>
           <li className="hover:opacity-70 transition">Extras</li>
           {/* ÚNICO BOTÓN DE TEMA TAMBIÉN AQUÍ */}
           <ThemeToggle />

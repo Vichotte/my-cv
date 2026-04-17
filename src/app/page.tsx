@@ -8,6 +8,7 @@ import Experiencia from "./components/Experiencia";
 import { useEffect, useState } from "react";
 import Estudios from "./components/Estudios";
 import Habilidades from "./components/Habilidades"
+import Contacto from "./components/Contacto"
 
 export default function Home() {
   const [mounted, setMounted] = useState(false);
@@ -29,6 +30,7 @@ export default function Home() {
         <Experiencia />
         <Estudios />
         <Habilidades />
+        <Contacto />
 
       </main>
     </div>
