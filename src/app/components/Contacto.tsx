@@ -19,7 +19,7 @@ export default function Contacto() {
           <div className="flex items-center gap-3">
             <Mail className="w-6 h-6 text-blue-400" />
             <a
-              href="mailto:tu-correo@gmail.com"
+              href="mailto:marcosjv1644@gmail.com"
               className="text-lg opacity-80 hover:opacity-100 transition"
             >
               marcosjv1644@gmail.com

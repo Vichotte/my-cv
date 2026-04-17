@@ -13,14 +13,15 @@ export default function Inicio() {
     files.forEach((file) => {
       const link = document.createElement("a");
       link.href = file;
-
-      // SOLUCIÓN: asegurar que siempre sea string
       link.download = file.split("/").pop() || "";
-
       document.body.appendChild(link);
       link.click();
       document.body.removeChild(link);
     });
+  };
+
+  const handleContact = () => {
+    window.location.href = "mailto:marcosjv1644@gmail.com";
   };
 
   return (
@@ -47,7 +48,11 @@ export default function Inicio() {
             Descargar CV
           </button>
 
-          <button className="px-6 py-3 rounded-full bg-yellow-400 text-black font-medium hover:opacity-80 transition">
+          {/* BOTÓN CONTACTAR */}
+          <button
+            onClick={handleContact}
+            className="px-6 py-3 rounded-full bg-yellow-400 text-black font-medium hover:opacity-80 transition"
+          >
             Contáctame
           </button>
         </div>
