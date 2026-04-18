@@ -1,21 +1,23 @@
 "use client";
 
 import { Mail, Phone, Link, ExternalLink } from "lucide-react";
+import { useLanguage } from "@/context/LanguageContext";
+
 
 
 export default function Contacto() {
+  const { lang } = useLanguage();
   return (
     <section id="contacto" className="w-full py-20 flex flex-col gap-10">
 
-      <h2 className="text-3xl md:text-4xl font-bold">Contacto</h2>
+      <h2 className="text-3xl md:text-4xl font-bold">
+        {lang === "es" ? "Contact" : "Contact Me"}
+      </h2>
 
-      {/* CUADRO PRINCIPAL */}
       <div className="w-full p-8 rounded-xl border border-foreground/20 bg-background/50 shadow-lg flex flex-col gap-8">
 
-        {/* FILA 1: EMAIL + TELÉFONO */}
         <div className="flex flex-col md:flex-row justify-between gap-6">
 
-          {/* EMAIL */}
           <div className="flex items-center gap-3">
             <Mail className="w-6 h-6 text-blue-400" />
             <a
@@ -26,7 +28,6 @@ export default function Contacto() {
             </a>
           </div>
 
-          {/* TELÉFONO */}
           <div className="flex items-center gap-3">
             <Phone className="w-6 h-6 text-blue-400" />
             <a

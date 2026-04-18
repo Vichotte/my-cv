@@ -2,9 +2,13 @@
 
 import { useState } from "react";
 import ThemeToggle from "./ThemeToggle";
+import LanguageToggle from "./LanguageToggle";
+import { useLanguage } from "@/context/LanguageContext";
+
 
 export default function Navbar() {
   const [open, setOpen] = useState(false);
+  const { lang } = useLanguage();
 
   return (
     <nav className="w-full bg-background text-foreground border-b border-foreground/20">
@@ -14,7 +18,7 @@ export default function Navbar() {
 
         {/* LOGO */}
         <div className="text-xl font-semibold">
-          Mi Portfolio
+          {lang === "es" ? "Mi Portfolio" : "My Portfolio"}
         </div>
 
         {/* HAMBURGUESA (solo móvil) */}
@@ -29,42 +33,47 @@ export default function Navbar() {
         <ul className="hidden md:flex gap-6 text-base font-medium items-center">
         <li>
           <a href="#inicio" className="cursor-pointer hover:opacity-70 transition">
-            Inicio
+            {lang === "es" ? "Inicio" : "Start"}
           </a>
         </li>
 
         <li>
           <a href="#sobremi" className="cursor-pointer hover:opacity-70 transition">
-            Sobre Mí
+            {lang === "es" ? "Sobre Mí" : "About Me"}
           </a>
         </li>
 
         <li>
           <a href="#experiencia" className="cursor-pointer hover:opacity-70 transition">
-            Experiencia
+            {lang === "es" ? "Experiencia" : "Experience"}
           </a>
         </li>
 
         <li>
           <a href="#estudios" className="cursor-pointer hover:opacity-70 transition">
-            Estudios
+            {lang === "es" ? "Estudios" : "Education"}
           </a>
         </li>
 
         <li>
           <a href="#habilidades" className="cursor-pointer hover:opacity-70 transition">
-            Habilidades
+            {lang === "es" ? "Habilidades" : "Skills"}
           </a>
         </li>
 
          <li>
           <a href="#contacto" className="cursor-pointer hover:opacity-70 transition">
-            Contacto
+            {lang === "es" ? "Contacto" : "Contact Me"}
           </a>
         </li>
 
-        <li className="cursor-pointer hover:opacity-70 transition">Extras</li>
+        <li>
+          <a href="https://github.com/Vichotte" className="cursor-pointer hover:opacity-70 transition">
+            {lang === "es" ? "Extras" : "Extras"}
+          </a>
+        </li>
 
+        <LanguageToggle />
         <ThemeToggle />
       </ul>
 
@@ -81,6 +90,7 @@ export default function Navbar() {
            <li><a href="#contacto" className="hover:opacity-70 transition">Contacto</a></li>
           <li className="hover:opacity-70 transition">Extras</li>
           {/* ÚNICO BOTÓN DE TEMA TAMBIÉN AQUÍ */}
+          <LanguageToggle />
           <ThemeToggle />
         </ul>
       )}

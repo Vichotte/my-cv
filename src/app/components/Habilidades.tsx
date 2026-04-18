@@ -1,9 +1,13 @@
 "use client";
 
+import { useLanguage } from "@/context/LanguageContext";
+
+
 import { useEffect, useState } from "react";
 import Image from "next/image";
 
 export default function Habilidades() {
+  const { lang } = useLanguage();
   const [mounted, setMounted] = useState(false);
 
   useEffect(() => {
@@ -60,14 +64,18 @@ export default function Habilidades() {
   if (!mounted) {
     return (
       <section id="habilidades" className="w-full py-20 flex flex-col gap-10">
-        <h2 className="text-3xl md:text-4xl font-bold">Habilidades</h2>
+        <h2 className="text-3xl md:text-4xl font-bold">
+          {lang === "es" ? "Habilidades" : "Skills"}
+        </h2>
       </section>
     );
   }
 
   return (
     <section id="habilidades" className="w-full py-20 flex flex-col gap-10">
-      <h2 className="text-3xl md:text-4xl font-bold">Habilidades</h2>
+      <h2 className="text-3xl md:text-4xl font-bold">
+        {lang === "es" ? "Habilidades" : "Skills"}
+      </h2>
 
       <div className="overflow-hidden w-full">
         <div

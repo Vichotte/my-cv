@@ -1,10 +1,16 @@
 "use client";
 
+import { useLanguage } from "@/context/LanguageContext";
+
+
 export default function Estudios() {
+  const { lang } = useLanguage();
   return (
     <section id="estudios" className="w-full py-20 flex flex-col gap-10">
 
-      <h2 className="text-3xl md:text-4xl font-bold">Estudios</h2>
+      <h2 className="text-3xl md:text-4xl font-bold">
+        {lang === "es" ? "Estudios" : "Education"}
+      </h2>
 
       <div className="w-full p-8 rounded-xl border border-foreground/20 bg-background/50 shadow-lg">
 
@@ -31,12 +37,11 @@ export default function Estudios() {
 
             <div>
               <h3 className="text-xl font-semibold">
-                CICLO FORMATIVO DE GRADO SUPERIOR, DESARROLLO DE APLICACIONES MULTIPLATAFORMA (D.A.M)
+                {lang === "es" ? "CICLO FORMATIVO DE GRADO SUPERIOR, DESARROLLO DE APLICACIONES MULTIPLATAFORMA (D.A.M)" : "HIGHER LEVEL VOCATIONAL TRAINING CYCLE, MULTIPLATFORM APPLICATION DEVELOPMENT"}
               </h3>
               <p className="opacity-80">09/2023 – 06/2025</p>
               <p className="mt-2 opacity-80 leading-relaxed">
-                Formación avanzada y especifica en el mundo del desarrollo de software, bases de datos, programación,
-                aplicaciones desktop como móviles y metodologías modernas.
+                {lang === "es" ? "Formación avanzada y especifica en el mundo del desarrollo de software, bases de datos, programación, aplicaciones desktop como móviles y metodologías modernas." : "Advanced and specific training in the world of software development, databases, programming, desktop and mobile applications and modern methodologies."}
               </p>
             </div>
 
@@ -44,11 +49,11 @@ export default function Estudios() {
 
             <div>
               <h3 className="text-xl font-semibold">
-                CICLO FORMATIVO DE GRADO MEDIO, SISTEMAS MICROINFORMÁTICO Y REDES (S.M.R)
+                {lang === "es" ? "CICLO FORMATIVO DE GRADO MEDIO, SISTEMAS MICROINFORMÁTICO Y REDES (S.M.R)" : "INTERMEDIATE VOCATIONAL TRAINING CYCLE, MICROCOMPUTER SYSTEMS AND NETWORKS"}
               </h3>
               <p className="opacity-80">09/2021 – 06/2023</p>
               <p className="mt-2 opacity-80 leading-relaxed">
-                Formación en montaje, mantenimiento y soporte de equipos informáticos, redes, sistemas operativos.
+                {lang === "es" ? "Formación en montaje, mantenimiento y soporte de equipos informáticos, redes, sistemas operativos." : "Training in assembly, maintenance and support of computer equipment, networks, and operating systems."}
               </p>
             </div>
           </div>
