@@ -37,8 +37,8 @@ export default function QuizPMD() {
 };
 
 const getFinalPokemon = () => {
-  // 1. Encontrar la personalidad con más puntos
   const entries = Object.entries(personalityScores);
+  console.log("Puntuaciones finales:", personalityScores);
 
   if (entries.length === 0) return "No se pudo calcular tu personalidad.";
 
@@ -46,20 +46,29 @@ const getFinalPokemon = () => {
     curr[1] > max[1] ? curr : max
   );
 
-  // 2. Mapeo personalidad → Pokémon
+  const normalized = topPersonality.trim().toLowerCase();
+
   const map: Record<string, string> = {
-    Audaz: "Charmander",
-    Fuerte: "Machop",
-    Dócil: "Squirtle",
-    Alegre: "Pikachu",
-    Tímido: "Meowth",
-    Travieso: "Torchic",
-    Valiente: "Bulbasaur",
-    Calmado: "Psyduck",
-    // añade aquí todas las personalidades que tengas en tu seed
+    audaz: "Charmander",
+    fuerte: "Machop",
+    dócil: "Squirtle",
+    alegre: "Pikachu",
+    tímido: "Meowth",
+    miedosa: "Meowth",
+    travieso: "Torchic",
+    agitada: "Torchic",
+    valiente: "Bulbasaur",
+    calmado: "Psyduck",
+    plácida: "Psyduck",
+    serena: "Chikorita",
+    osada: "Eevee",
+    grosera: "Cubone",
+    rara: "Psyduck",
+    activa: "Totodile",
+    huraña: "Skitty",
   };
 
-  return map[topPersonality] || "Eevee";
+  return map[normalized] || "Eevee";
 };
 
 
