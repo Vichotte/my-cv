@@ -3,24 +3,34 @@
 
 // Get a free hosted Postgres database in seconds: `npx create-db`
 
+generator client {
+  provider = "prisma-client"
+  output   = "../generated/prisma"
+  url      = "file:./prisma/quiz.db"
+}
+
 datasource db {
   provider = "sqlite"
 }
 
-generator client {
-  provider = "prisma-client-js"
-}
-
 model Question {
-  id       Int             @id @default(autoincrement())
-  text     String
-  options  AnswerOption[]
+  id      Int             @id @default(autoincrement())
+  text    String
+  options AnswerOption[]
 }
 
 model AnswerOption {
-  id         Int      @id @default(autoincrement())
+  id         Int                @id @default(autoincrement())
   text       String
-  value      Int
-  question   Question @relation(fields: [questionId], references: [id])
+  question   Question           @relation(fields: [questionId], references: [id])
   questionId Int
+  scores     PersonalityScore[]   // ← ESTO ES LO QUE TE FALTA
+}
+
+model PersonalityScore {
+  id             Int           @id @default(autoincrement())
+  personality    String
+  points         Int
+  answerOption   AnswerOption  @relation(fields: [answerOptionId], references: [id])
+  answerOptionId Int
 }
