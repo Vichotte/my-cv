@@ -11,7 +11,7 @@ export default function Contacto() {
     <section id="contacto" className="w-full py-20 flex flex-col gap-10">
 
       <h2 className="text-3xl md:text-4xl font-bold">
-        {lang === "es" ? "Contact" : "Contact Me"}
+        {lang === "es" ? "Contacto" : "Contact Me"}
       </h2>
 
       <div className="w-full p-8 rounded-xl border border-foreground/20 bg-background/50 shadow-lg flex flex-col gap-8">
