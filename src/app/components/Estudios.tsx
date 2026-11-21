@@ -59,6 +59,42 @@ export default function Estudios() {
           </div>
         </div>
       </div>
+
+    <div className="w-full p-8 rounded-xl border border-foreground/20 bg-background/50 shadow-lg">
+
+        <div className="flex flex-col md:flex-row gap-8">
+
+          {/* COLUMNA IZQUIERDA */}
+          <div className="md:w-1/3 flex flex-col justify-center">
+            <h3 className="text-xl font-semibold">CMICE Getafe</h3>
+            <a
+            href="https://cftic.centrosdeformacion.empleo.madrid.org"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="opacity-70 break-all text-blue-400 hover:underline"
+            >
+            Web: https://cftic.centrosdeformacion.empleo.madrid.org
+            </a>
+          </div>
+
+          {/* LÍNEA DIVISORIA */}
+          <div className="hidden md:block w-px bg-foreground/20"></div>
+
+          {/* COLUMNA DERECHA */}
+          <div className="md:w-2/3 flex flex-col gap-4">
+
+            <div>
+              <h3 className="text-xl font-semibold">
+                {lang === "es" ? "Confección y Publicación de Páginas Web" : "Creation and Publication of Web Pages"}
+              </h3>
+              <p className="opacity-80">11/2026 – 04/2027</p>
+              <p className="mt-2 opacity-80 leading-relaxed">
+                {lang === "es" ? "Formación especializada en desarrollo web, diseño y maquetación de páginas mediante lenguajes de marcado, hojas de estilo, programación de componentes interactivos, integración de funcionalidades y publicación de sitios web, aplicando criterios de usabilidad, accesibilidad y optimización." : "Specialized training in web development, website design and layout using markup languages, style sheets, interactive component programming, functionality integration and website deployment, applying usability, accessibility and optimization standards."}
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
     </section>
   );
 }
