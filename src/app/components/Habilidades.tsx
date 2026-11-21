@@ -27,7 +27,10 @@ export default function Habilidades() {
     { src: "/img/habilidades/devops.png", alt: "Azure DevOPS" },
     { src: "/img/habilidades/abm.png", alt: "Apple Business Manager" },
     { src: "/img/habilidades/appleconfig.png", alt: "Apple Configurator" },
-    { src: "/img/habilidades/jamf.png", alt: "Jamf Now" },
+    { src: "/img/habilidades/html5.png", alt: "HTML5" },
+    { src: "/img/habilidades/css3.png", alt: "CSS3" },
+    { src: "/img/habilidades/javascript.png", alt: "JavaScript" },
+    { src: "/img/habilidades/wordpress.png", alt: "WordPress" },
 
   ];
 
